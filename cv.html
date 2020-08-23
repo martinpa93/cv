@@ -6,66 +6,259 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="keywords" content="Martín Palacios Albors, cv, curriculum, curriculum vitae">
     <meta name="author" content="Martín Palacios Albors">
-    <title>CV-MPA</title>
+    <title>MartínPalacios-CV</title>
     <meta name="description" content="My curriculum"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <style>
-    body{
+
+    .btn-container {
+      position: fixed;
+      width: 210mm;
+      bottom: 0;
+      padding-bottom: 15px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      height: 70px;
+      color: #fff;
+      background-color: #0d6efd;
+      border-radius: 25px;
+      font-family: "Helvetica";
+      font-size: 18px;
+      cursor: pointer;
+      opacity: 0.4;
+    }
+
+    .btn:focus {
+      outline: none;
+    }
+
+    .btn:hover {
+      opacity: 1;
+      border-color: white;
+      transition: all 2s;
+    }
+
+   /******************************* DOCUMENTO ************************************/
+
+   @page {
+      size: auto;
+      margin: 0mm;
+    }
+
+    body {
       height:297mm;
       width:210mm;
-      margin: 1cm;
-      box-sizing: border-box;
-    } 
+      margin: auto;
+      font-family: Agency FB;
+      font-size: 16px;
+    }
 
+    /************************* FIX PADDING */
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+    /************************* FIX PADDING */
+
+    #print {
+      padding: 1.5cm;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .basic{
+      font-family: Impact;
+      font-size: 28px;
+    }
+
+    .divider {
+      border-top: 3px solid #E8E8E8;
+      margin: 20px 0;
+    }
+
+    .header-profile {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .contact {
+      padding-left: 100px; 
+    }
+
+    .header-profile > div:first-child, .body-container > div:first-child {
+      width: 50%;
+    }
+
+    .header-profile > div:nth-child(2) > div > span:nth-child(1) {
+      padding-right: 0.7cm;
+    }
+
+    .header-profile > div:nth-child(2) > div:nth-child(4) {
+      padding-top: 0.7cm;
+    }
+
+    .body-container {
+      display: flex;
+    }
+    
+    .left-container, .right-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+
+    .right-container > div {
+      text-align: center;
+    }
+
+    .right-container > div > div:nth-child(1) {
+      border-radius: 16px;
+      background-color: #E8E8E8;
+    }
+
+    .muted-text {
+      color: red;
+    }
+    
+    .languages, .soft-skills {
+      padding-top: 50px;
+    }
     </style>
   </head>
   <body>
     <div id="print">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10 offset-md-1">
-            <p align="CENTER"><b>CERTIFICAN:</b></p>
-            <p align="LEFT"><font size="2" style="font-size: 9pt">Que NOMBRE APELLIDO estuvo matriculado(a) en el XXXXX, Calendario X, en el Grado numero para el año escolar año} y obtuvo los siguientes resultados finales:</font></p>
-          </div>
+
+      <div class="header-profile">
+        <div class="basic">
+          <div>Martín Palacios Albors</div>
+          <div>Developer</div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">AREAS/ASIGNATURAS</th>
-                    <th scope="col">I.H</th>
-                    <th scope="col">CALIFICACIÓN</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><b>area_name</b></td>
-                    <td><b>todas las horas</b></td>
-                    <td>notas</td>
-                  </tr>
-                </tbody>
-              </table>
-              <button type="button" class="btn btn-primary btn-lg btn-block">Pasar a PDF</button>
+        <div class="contact">
+          <div>
+            <span>T</span>
+            <span class="phone">679361181</span>
+          </div>
+          <div>
+            <span>E</span>
+            <span>martinpa_93@hotmail.com</span>
+          </div>
+          <div>
+            <span>L</span>
+            <span>/martinpa93</span>
+          </div>
+          <div>
+            <div>
+              Pintor Pascual Capuz 4, pta 9
+            </div>
+            <div>
+              46018 Valencia(Spain)
             </div>
           </div>
         </div>
       </div>
+      <div class="divider"></div>
+      <div class="body-container">
+        <div class="left-container">
+          <div class="experience-container">
+            WORK
+            <div>
+              <div>
+                <div>06-2019 -- 12-2019</div>
+                <div>Okode</div>
+                <div class="muted-text">Junior web developer</div>
+                <div class="tasks">
+                  <ul>
+                    <li>Development and maintenance of hybrid app in Ionic / Angular / Capacitor/ Cordova in telemedicine area</li>
+                    <li>Troubleshooting and integration of search services in SpingMVC and ElasticSearch / Kibana</li>
+                    <li>Unit testing with Jasmine / Karma</li>
+                    <li>Functional testing with Gherkin / Selenium / Python</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <div>11-2017 -- 05-2018</div>
+                <div>Capgemini</div>
+                <div class="muted-text">Intership ABAP developer</div>
+                <div class="tasks">
+                  <ul>
+                    <li>Maintance of multiple SAP projects</li>
+                    <li>Integration with SAPUI5</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <div>03-2017 -- 09-2017</div>
+                <div>Tecsible</div>
+                <div class="muted-text">Intership web developer</div>
+                <div class="tasks">
+                  <ul>
+                    <li>Web developer in LAPP (Linux, Apache, PHP, PostgreSQL) environment on an application for call centers</li>
+                    <li>Integration with Zoho CRM API for incoming calls managed by Asterisk PBX</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="projects-container">
+            PROJECTS
+            <div>Grouptrack: Hybrid app with SocketIO / Express / Ionic / Capacitor / Angular / MongoDB for control the location of party of people</div>
+            <div>Rentstate: Web application with Angular / Laravel / MariaDB for manage the business of rental properties</div>
+            <div>Renstate2: Desktop application with Angular / Electron / SQLite for manage the business of rental properties</div>
+            <div>MovieApp: Hybrid app with Ionic that list and detail movies from public API</div>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="education">
+            <div>EDUCATION</div>
+            <div>2020</div>
+            <div>Computer Engineering, IT branch</div>
+            <div class="muted-text">UPV (Universidad Politécnica de Valencia)</div>
+          </div>
+          <div class="languages">
+            <div>LANGUAGES</div>
+            <div>Spanish - Native</div>
+            <div>Valenciano - Medium</div>
+            <div>English - Medium</div>
+          </div>
+          <div class="soft-skills">
+            <div>SOFT SKILLS</div>
+            <div>Adaptabilidad</div>
+            <div>Gobernanza</div>
+            <div>Inclusividad</div>
+            <div>Colaboración</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-container">
+      <button type="button" class="btn">Guardar en PDF</button>
     </div>
 
     <!--------------------------------------- Scripts ------------------------------->
 
     <script type="text/javascript">
-        const ele =document.querySelector('button');
-        ele.addEventListener("click", () => {
-          ele.style.display = "none";
+      
+      formatPhone();
+      exportPDF();
+
+      function formatPhone() {
+        const phone = document.querySelector('.phone');
+        phone.innerText = phone.innerText.replace(/(\d{3})(\d{3})(\d{3})/, '$1  $2 $3')
+      }
+
+      function exportPDF() {
+        const btn = document.querySelector('.btn-container')
+        btn.addEventListener("click", () => {
+          btn.style.display = "none";
           setTimeout(() => {
-            ele.style.display = "block";
+            btn.style.display = "block";
           }, 500);
           window.print();
         });
+      }
     </script>
   </body>
 </html>
