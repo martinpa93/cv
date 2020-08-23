@@ -14,7 +14,6 @@
       position: fixed;
       width: 210mm;
       bottom: 0;
-      padding-bottom: 15px;
     }
 
     .btn {
@@ -48,19 +47,12 @@
     }
 
     body {
-      height:297mm;
-      width:210mm;
+      height: 297mm;
+      width: 210mm;
       margin: auto;
       font-family: Agency FB;
       font-size: 16px;
     }
-
-    /************************* FIX PADDING */
-    ul {
-      padding: 0;
-      list-style-type: none;
-    }
-    /************************* FIX PADDING */
 
     #print {
       padding: 1.5cm;
@@ -107,6 +99,14 @@
       display: flex;
       flex-direction: column;
       width: 50%;
+    }
+    
+    .right-container {
+      padding: 0 20px;
+    }
+    
+    .tasks {
+      padding: 20px 0;
     }
 
     .right-container > div {
@@ -165,38 +165,32 @@
             WORK
             <div>
               <div>
-                <div>06-2019 -- 12-2019</div>
+                <div>06-2019 &#151; 12-2019</div>
                 <div>Okode</div>
                 <div class="muted-text">Junior web developer</div>
                 <div class="tasks">
-                  <ul>
-                    <li>Development and maintenance of hybrid app in Ionic / Angular / Capacitor/ Cordova in telemedicine area</li>
-                    <li>Troubleshooting and integration of search services in SpingMVC and ElasticSearch / Kibana</li>
-                    <li>Unit testing with Jasmine / Karma</li>
-                    <li>Functional testing with Gherkin / Selenium / Python</li>
-                  </ul>
+                  <div>Development and maintenance of a hybrid app in Ionic / Angular / Capacitor/ Cordova in telemedicine area</div>
+                  <div>Troubleshooting and integration of search services in SpingMVC and ElasticSearch / Kibana</div>
+                  <div>Unit testing with Jasmine / Karma</div>
+                  <div>Functional testing with Gherkin / Selenium / Python</div>
                 </div>
               </div>
               <div>
-                <div>11-2017 -- 05-2018</div>
+                <div>11-2017 &#151; 05-2018</div>
                 <div>Capgemini</div>
                 <div class="muted-text">Intership ABAP developer</div>
                 <div class="tasks">
-                  <ul>
-                    <li>Maintance of multiple SAP projects</li>
-                    <li>Integration with SAPUI5</li>
-                  </ul>
+                  <div>Maintance of multiple SAP projects</div>
+                  <div>Integration with SAPUI5</div>
                 </div>
               </div>
               <div>
-                <div>03-2017 -- 09-2017</div>
+                <div>03-2017 &#151; 09-2017</div>
                 <div>Tecsible</div>
                 <div class="muted-text">Intership web developer</div>
                 <div class="tasks">
-                  <ul>
-                    <li>Web developer in LAPP (Linux, Apache, PHP, PostgreSQL) environment on an application for call centers</li>
-                    <li>Integration with Zoho CRM API for incoming calls managed by Asterisk PBX</li>
-                  </ul>
+                  <div>Web developer in LAPP (Linux, Apache, PHP, PostgreSQL) environment on an application for call centers</div>
+                  <div>Integration with Zoho CRM API with specific workflow on incoming calls managed by Asterisk PBX</div>
                 </div>
               </div>
             </div>
@@ -207,7 +201,7 @@
             <div>Grouptrack: Hybrid app with SocketIO / Express / Ionic / Capacitor / Angular / MongoDB for control the location of party of people</div>
             <div>Rentstate: Web application with Angular / Laravel / MariaDB for manage the business of rental properties</div>
             <div>Renstate2: Desktop application with Angular / Electron / SQLite for manage the business of rental properties</div>
-            <div>MovieApp: Hybrid app with Ionic that list and detail movies from public API</div>
+            <div>MovieApp: Hybrid app with Ionic which consists of list and detail movies from public API</div>
           </div>
         </div>
         <div class="right-container">
@@ -219,22 +213,22 @@
           </div>
           <div class="languages">
             <div>LANGUAGES</div>
-            <div>Spanish - Native</div>
-            <div>Valenciano - Medium</div>
-            <div>English - Medium</div>
+            <div>Spanish &#151; Native</div>
+            <div>Valenciano &#151; Medium</div>
+            <div>English &#151; Medium</div>
           </div>
           <div class="soft-skills">
             <div>SOFT SKILLS</div>
-            <div>Adaptabilidad</div>
-            <div>Gobernanza</div>
-            <div>Inclusividad</div>
-            <div>Colaboración</div>
+            <div>Adaptability</div>
+            <div>Governance</div>
+            <div>Inclusivity</div>
+            <div>Collaboration</div>
           </div>
         </div>
       </div>
     </div>
     <div class="btn-container">
-      <button type="button" class="btn">Guardar en PDF</button>
+      <button type="button" class="btn">Save as PDF</button>
     </div>
 
     <!--------------------------------------- Scripts ------------------------------->
@@ -246,7 +240,7 @@
 
       function formatPhone() {
         const phone = document.querySelector('.phone');
-        phone.innerText = phone.innerText.replace(/(\d{3})(\d{3})(\d{3})/, '$1  $2 $3')
+        phone.innerText = phone.innerText.replace(/(\d{3})(\d{3})(\d{3})/, '$1 $2 $3')
       }
 
       function exportPDF() {
