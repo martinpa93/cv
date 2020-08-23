@@ -87,7 +87,7 @@
       padding-right: 0.7cm;
     }
 
-    .header-profile > div:nth-child(2) > div:nth-child(4) {
+    .header-profile > div:nth-child(2) > div:nth-child(5) {
       padding-top: 0.7cm;
     }
 
@@ -95,13 +95,13 @@
       display: flex;
     }
     
-    .left-container, .right-container {
+    .left, .right {
       display: flex;
       flex-direction: column;
       width: 50%;
     }
     
-    .right-container {
+    .right {
       padding: 0 20px;
     }
     
@@ -109,14 +109,16 @@
       padding: 20px 0;
     }
 
-    .right-container > div {
+    .right > div {
       text-align: center;
     }
 
-    .right-container > div > div:nth-child(1) {
+    .right > div > div:nth-child(1), .experience > div:first-child, .projects > div:first-child {
       border-radius: 16px;
       background-color: #E8E8E8;
       -webkit-print-color-adjust: exact;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     .muted-text {
@@ -150,6 +152,10 @@
             <span>/martinpa93</span>
           </div>
           <div>
+            <span>G</span>
+            <span>/martinpa93</span>
+          </div>
+          <div>
             <div>
               Pintor Pascual Capuz 4, pta 9
             </div>
@@ -161,9 +167,9 @@
       </div>
       <div class="divider"></div>
       <div class="body-container">
-        <div class="left-container">
-          <div class="experience-container">
-            WORK
+        <div class="left">
+          <div class="experience">
+            <div>WORK</div>
             <div>
               <div>
                 <div>06-2019 &#151; 12-2019</div>
@@ -197,15 +203,15 @@
             </div>
           </div>
           <div class="divider"></div>
-          <div class="projects-container">
-            PROJECTS
+          <div class="projects">
+            <div>PROJECTS</div>
             <div>Grouptrack: Hybrid app with SocketIO / Express / Ionic / Capacitor / Angular / MongoDB for control the location of party of people</div>
             <div>Rentstate: Web application with Angular / Laravel / MariaDB for manage the business of rental properties</div>
             <div>Renstate2: Desktop application with Angular / Electron / SQLite for manage the business of rental properties</div>
             <div>MovieApp: Hybrid app with Ionic which consists of list and detail movies from public API</div>
           </div>
         </div>
-        <div class="right-container">
+        <div class="right">
           <div class="education">
             <div>EDUCATION</div>
             <div>2020</div>
