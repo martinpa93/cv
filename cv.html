@@ -42,7 +42,7 @@
       transition: all 2s;
     }
 
-   /******************************* DOCUMENTO ************************************/
+   /******************************* DOCUMENT ************************************/
 
    @page {
       size: auto;
@@ -151,10 +151,6 @@
             <span>/martinpa93</span>
           </div>
           <div>
-            <span>G</span>
-            <span>/martinpa93</span>
-          </div>
-          <div>
             <div>
               Pintor Pascual Capuz 4, pta 9
             </div>
@@ -170,6 +166,15 @@
           <div class="experience">
             <div>EXPERIENCE</div>
             <div>
+              <div>
+                <div>12-2020 &#151; 10-2021</div>
+                <div>UPV</div>
+                <div class="muted-text">Técnico Superior</div>
+                <div class="tasks">
+                  <div>Install applications from source to centos and ubuntu with CUDA support</div>
+                  <div>Test the rCUDA middleware in UPV cluster</div>
+                </div>
+              </div>
               <div>
                 <div>06-2019 &#151; 12-2019</div>
                 <div>Okode</div>
@@ -244,7 +249,7 @@
 
       function formatPhone() {
         const phone = document.querySelector('.phone');
-        phone.innerText = phone.innerText.replace(/(\d{3})(\d{3})(\d{3})/, '$1 $2 $3')
+        phone.innerText = phone.innerText.replace(/(\d{3})(\d{3})(\d{3})/, '$1 $2 $3');
       }
 
       function exportPDF() {
