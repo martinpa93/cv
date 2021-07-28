@@ -267,7 +267,7 @@
             <div class="muted-text">UPV (Universidad Politécnica de Valencia)</div>
           </div>
           <div class="projects">
-            <div data-i18n="projects">PROJECTS</div>
+            <div data-i18n="projects"></div>
             <div data-i18n="project1"></div>
             <div data-i18n="project2"></div>
             <div data-i18n="project3"></div>
@@ -316,7 +316,7 @@
           job3task2: "Integración con SAPUI5",
           job4Name: "Becario, desarrollador web",
           job4task1: "Desarrollador web en entorno LAPP(Linux, Apache, PHP, PostgreSQL) para una aplicación de centros de soporte telefónico",
-          job4task2: "Integración con el CRM Zoho para el desarrollo de un flujo de trabajo dónde los agentes puedan recibir las llamadas",
+          job4task2: "Integración con la API CRM Zoho ",
           education: "EDUCACIÓN",
           educationTitle: "Grado de Ingeniería Informática, rama TI",
           projects: "PROYECTOS",
@@ -325,9 +325,9 @@
           project3: "Rentstate2: Aplicación web de escritorio en Angular / Electron /SQLite para la gestion de alquileres de inmuebles",
           project4: "MovieApp: Aplicación híbrida en Ionic que consiste en buscar películas y mostrar su información recabada de un API pública.",
           languages: "IDIOMAS",
-          languageSpanish: "Español &#151; Nativo",
-          languageValenciano: "Valenciano &#151; Intermedio",
-          languageEnglish: "Inglés &#151; Intermediate",
+          languageSpanish: "Español — Nativo",
+          languageValenciano: "Valenciano — Intermedio",
+          languageEnglish: "Inglés — Intermediate",
           softSkills: "COMPETENCIAS SOCIALES",
           softSkill1: "Adaptable",
           softSkill2: "Aprendizaje continuo",
@@ -353,18 +353,18 @@
           job3task2: "Integration with SAPUI5",
           job4Name: "Internship web developer",
           job4task1: "Web developer in LAPP (Linux, Apache, PHP, PostgreSQL) environment on an application for call centers",
-          job4task2: "Integration with Zoho CRM API with specific workflow on incoming calls managed by Asterisk PBX",
+          job4task2: "Integration with Zoho CRM API",
           education: "EDUCATION",
           educationTitle: "Computer Engineering, IT branch",
-          projects: "PROJETS",
+          projects: "PROJECTS",
           project1: "Grouptrack: Hybrid app with SocketIO / Express / Ionic / Capacitor / Angular / MongoDB for control the location of party of people", 
           project2: "Rentstate: Web application with Angular / Laravel / MariaDB for manage the business of rental properties",
           project3: "Renstate2: Desktop application with Angular / Electron / SQLite for manage the business of rental properties",
           project4: "MovieApp: Hybrid app with Ionic which consists of list and detail movies from public API",
           languages: "LANGUAGES",
-          languageSpanish: "Spanish &#151; Native",
-          languageValenciano: "Valenciano &#151; Intermediate",
-          languageEnglish: "English &#151; Intermediate",
+          languageSpanish: "Spanish — Native",
+          languageValenciano: "Valenciano — Intermediate",
+          languageEnglish: "English — Intermediate",
           softSkills: "SOFT SKILLS",
           softSkill1: "Adaptability",
           softSkill2: "Growth mindset",
@@ -377,7 +377,7 @@
         const elements = document.querySelectorAll("[data-i18n]");    
         const replaceText = (el, lang) => { 
           const key = el.getAttribute("data-i18n");
-          el.innerText = i18n[lang][key] || key;
+          el.textContent = i18n[lang][key] || key;
         }    
         elements.forEach(el => replaceText(el, lang));
       }
