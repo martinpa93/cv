@@ -44,9 +44,15 @@
 
    /******************************* DOCUMENT ************************************/
 
-   @page {
+    @page {
       size: auto;
       margin: 0mm;
+    }
+
+    @media print {
+      .noPrint{
+        display:none;
+      }
     }
 
     body {
@@ -177,7 +183,7 @@
   </head>
   <body>
     <div class="dropdown">
-      <button data-i18n="language" class="dropbtn"></button>
+      <button data-i18n="language" class="dropbtn noPrint"></button>
       <div class="dropdown-content">
         <a href="#" data-i18n="spanish" id="spa-btn"></a>
         <a href="#" data-i18n="english" id="eng-btn"></a>
@@ -289,7 +295,7 @@
       </div>
     </div>
     <div class="btn-container">
-      <button data-i18n="btnPDF" type="button" class="btn"></button>
+      <button data-i18n="btnPDF" type="button" class="btn noPrint"></button>
     </div>
 
     <!--------------------------------------- Scripts ------------------------------->
