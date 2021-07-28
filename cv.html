@@ -127,15 +127,67 @@
     .projects, .languages, .soft-skills {
       padding-top: 50px;
     }
+
+    /* Dropdown Button */
+    .dropbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content .active {
+      background-color: #04AA6D!important;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
     </style>
   </head>
   <body>
+    <div class="dropdown">
+      <button data-i18n="language" class="dropbtn"></button>
+      <div class="dropdown-content">
+        <a href="#" data-i18n="spanish" id="spa-btn"></a>
+        <a href="#" data-i18n="english" id="eng-btn"></a>
+      </div>
+    </div>
     <div id="print">
-
       <div class="header-profile">
         <div class="basic">
           <div>Martín Palacios Albors</div>
-          <div>Developer</div>
+          <div data-i18n="job"></div>
         </div>
         <div class="contact">
           <div>
@@ -164,44 +216,44 @@
       <div class="body-container">
         <div class="left">
           <div class="experience">
-            <div>EXPERIENCE</div>
+            <div data-i18n="experience"></div>
             <div>
               <div>
                 <div>12-2020 &#151; 10-2021</div>
                 <div>UPV</div>
-                <div class="muted-text">Técnico Superior</div>
+                <div data-i18n="job1Name" class="muted-text"></div>
                 <div class="tasks">
-                  <div>Install applications from source to centos and ubuntu with CUDA support</div>
-                  <div>Test the rCUDA middleware in UPV cluster</div>
+                  <div data-i18n="job1task1"></div>
+                  <div data-i18n="job1task2"></div>
                 </div>
               </div>
               <div>
                 <div>06-2019 &#151; 12-2019</div>
                 <div>Okode</div>
-                <div class="muted-text">Junior web developer</div>
+                <div data-i18n="job2Name" class="muted-text"></div>
                 <div class="tasks">
-                  <div>Development and maintenance of a hybrid app in Ionic / Angular / Capacitor/ Cordova in telemedicine area</div>
-                  <div>Troubleshooting and integration of search services in SpingMVC and ElasticSearch / Kibana</div>
-                  <div>Unit testing with Jasmine / Karma</div>
-                  <div>Functional testing with Gherkin / Selenium / Python</div>
+                  <div data-i18n="job2task1"></div>
+                  <div data-i18n="job2task2"></div>
+                  <div data-i18n="job2task3"></div>
+                  <div data-i18n="job2task4"></div>
                 </div>
               </div>
               <div>
                 <div>11-2017 &#151; 05-2018</div>
                 <div>Capgemini</div>
-                <div class="muted-text">Internship ABAP developer</div>
+                <div data-i18n="job3Name" class="muted-text"></div>
                 <div class="tasks">
-                  <div>Maintance of multiple SAP projects</div>
-                  <div>Integration with SAPUI5</div>
+                  <div data-i18n="job3task1"></div>
+                  <div data-i18n="job3task2"></div>
                 </div>
               </div>
               <div>
                 <div>03-2017 &#151; 09-2017</div>
                 <div>Tecsible</div>
-                <div class="muted-text">Internship web developer</div>
+                <div data-i18n="job4Name" class="muted-text"></div>
                 <div class="tasks">
-                  <div>Web developer in LAPP (Linux, Apache, PHP, PostgreSQL) environment on an application for call centers</div>
-                  <div>Integration with Zoho CRM API with specific workflow on incoming calls managed by Asterisk PBX</div>
+                  <div data-i18n="job4task1"></div>
+                  <div data-i18n="job4task2"></div>
                 </div>
               </div>
             </div>
@@ -209,43 +261,148 @@
         </div>
         <div class="right">
           <div class="education">
-            <div>EDUCATION</div>
+            <div data-i18n="education"></div>
             <div>2020</div>
-            <div>Computer Engineering, IT branch</div>
+            <div data-i18n="educationTitle"></div>
             <div class="muted-text">UPV (Universidad Politécnica de Valencia)</div>
           </div>
           <div class="projects">
-            <div>PROJECTS</div>
-            <div>Grouptrack: Hybrid app with SocketIO / Express / Ionic / Capacitor / Angular / MongoDB for control the location of party of people</div>
-            <div>Rentstate: Web application with Angular / Laravel / MariaDB for manage the business of rental properties</div>
-            <div>Renstate2: Desktop application with Angular / Electron / SQLite for manage the business of rental properties</div>
-            <div>MovieApp: Hybrid app with Ionic which consists of list and detail movies from public API</div>
+            <div data-i18n="projects">PROJECTS</div>
+            <div data-i18n="project1"></div>
+            <div data-i18n="project2"></div>
+            <div data-i18n="project3"></div>
+            <div data-i18n="project4"></div>
           </div>
           <div class="languages">
-            <div>LANGUAGES</div>
-            <div>Spanish &#151; Native</div>
-            <div>Valenciano &#151; Intermediate</div>
-            <div>English &#151; Intermediate</div>
+            <div data-i18n="languages"></div>
+            <div data-i18n="languageSpanish"></div>
+            <div data-i18n="languageValenciano"></div>
+            <div data-i18n="languageEnglish"></div>
           </div>
           <div class="soft-skills">
-            <div>SOFT SKILLS</div>
-            <div>Adaptability</div>
-            <div>Growth mindset</div>
-            <div>Collaborative</div>
+            <div data-i18n="softSkills"></div>
+            <div data-i18n="softSkill1"></div>
+            <div data-i18n="softSkill2"></div>
+            <div data-i18n="softSkill3"></div>
           </div>
         </div>
       </div>
     </div>
     <div class="btn-container">
-      <button type="button" class="btn">Save as PDF</button>
+      <button data-i18n="btnPDF" type="button" class="btn"></button>
     </div>
 
     <!--------------------------------------- Scripts ------------------------------->
 
     <script type="text/javascript">
       
-      formatPhone();
-      exportPDF();
+      const i18n = {
+        es: {
+          language: "Idioma",
+          spanish: "Español",
+          english: "Inglés",
+          job: "Desarrollador",
+          experience: "EXPERIENCIA",
+          job1Name: "Técnico Superior",
+          job1task1: "Instalar aplicaciones desde el código fuente con soporte para CUDA en centos y ubuntu",
+          job1task2: "Probar el middleware rCUDA en el clúster del GAP",
+          job2Name: "Desarrollador Junior",
+          job2task1: "Desarrollar y mantener una aplicación híbrida en Ionic / Angular / Capacitor / Cordova en el área de la telemedicina",
+          job2task2: "Asistencia e integración de servicios de búsqueda en SpringMVC y ElasticSearch / Kibana",
+          job2task3: "Pruebas unitarias con Jasmine / Karma",
+          job2task4: "Pruebas funcionales con Gherkin / Selenium",
+          job3Name: "Becario, desarrollador ABAP",
+          job3task1: "Mantenimiento de múltiples proyectos de SAP",
+          job3task2: "Integración con SAPUI5",
+          job4Name: "Becario, desarrollador web",
+          job4task1: "Desarrollador web en entorno LAPP(Linux, Apache, PHP, PostgreSQL) para una aplicación de centros de soporte telefónico",
+          job4task2: "Integración con el CRM Zoho para el desarrollo de un flujo de trabajo dónde los agentes puedan recibir las llamadas",
+          education: "EDUCACIÓN",
+          educationTitle: "Grado de Ingeniería Informática, rama TI",
+          projects: "PROYECTOS",
+          project1: "Grouptrack: Aplicación híbrida con SocketIO / Express / Ionic/ Capacitor / Angular / MongoDB para el control de grupos de personas", 
+          project2: "Rentstate: Aplicación web con Angular / Laravel / MariaDB para la gestión de alquiler de inmuebles",
+          project3: "Rentstate2: Aplicación web de escritorio en Angular / Electron /SQLite para la gestion de alquileres de inmuebles",
+          project4: "MovieApp: Aplicación híbrida en Ionic que consiste en buscar películas y mostrar su información recabada de un API pública.",
+          languages: "IDIOMAS",
+          languageSpanish: "Español &#151; Nativo",
+          languageValenciano: "Valenciano &#151; Intermedio",
+          languageEnglish: "Inglés &#151; Intermediate",
+          softSkills: "COMPETENCIAS SOCIALES",
+          softSkill1: "Adaptable",
+          softSkill2: "Aprendizaje continuo",
+          softSkill3: "Colaborativo",
+          btnPDF: "Guardar como PDF"
+        },
+        en: {
+          language: "Language",
+          spanish: "Spanish",
+          english: "English",
+          job: "Developer",
+          experience: "EXPERIENCE",
+          job1Name: "Técnico Superior",
+          job1task1: "Install applications from source to centos and ubuntu with CUDA support",
+          job1task2: "Test the rCUDA middleware in GAP cluster",
+          job2Name: "Junior web developer",
+          job2task1: "Development and maintenance of a hybrid app in Ionic / Angular / Capacitor/ Cordova in telemedicine area",
+          job2task2: "Troubleshooting and integration of search services in SpingMVC and ElasticSearch / Kibana",
+          job2task3: "Unit testing with Jasmine / Karma",
+          job2task4: "Functional testing with Gherkin / Selenium",
+          job3Name: "Internship ABAP developer",
+          job3task1: "Maintance of multiple SAP projects",
+          job3task2: "Integration with SAPUI5",
+          job4Name: "Internship web developer",
+          job4task1: "Web developer in LAPP (Linux, Apache, PHP, PostgreSQL) environment on an application for call centers",
+          job4task2: "Integration with Zoho CRM API with specific workflow on incoming calls managed by Asterisk PBX",
+          education: "EDUCATION",
+          educationTitle: "Computer Engineering, IT branch",
+          projects: "PROJETS",
+          project1: "Grouptrack: Hybrid app with SocketIO / Express / Ionic / Capacitor / Angular / MongoDB for control the location of party of people", 
+          project2: "Rentstate: Web application with Angular / Laravel / MariaDB for manage the business of rental properties",
+          project3: "Renstate2: Desktop application with Angular / Electron / SQLite for manage the business of rental properties",
+          project4: "MovieApp: Hybrid app with Ionic which consists of list and detail movies from public API",
+          languages: "LANGUAGES",
+          languageSpanish: "Spanish &#151; Native",
+          languageValenciano: "Valenciano &#151; Intermediate",
+          languageEnglish: "English &#151; Intermediate",
+          softSkills: "SOFT SKILLS",
+          softSkill1: "Adaptability",
+          softSkill2: "Growth mindset",
+          softSkill3: "Collaborative",
+          btnPDF: "Save as PDF"
+        }
+      };
+
+      function loadI18n(lang) {
+        const elements = document.querySelectorAll("[data-i18n]");    
+        const replaceText = (el, lang) => { 
+          const key = el.getAttribute("data-i18n");
+          el.innerText = i18n[lang][key] || key;
+        }    
+        elements.forEach(el => replaceText(el, lang));
+      }
+
+      function initLanguage() {
+        const spaBtn=document.getElementById("spa-btn");
+        spaBtn.click();
+
+      }
+
+      function clickEventLanguage() {
+        const spaBtn=document.getElementById("spa-btn");
+        const engBtn=document.getElementById("eng-btn");
+        spaBtn.addEventListener("click", () => {
+          engBtn.classList.remove("active");
+          spaBtn.classList.add("active");
+          loadI18n("es");
+        });
+        engBtn.addEventListener("click", () => {
+          spaBtn.classList.remove("active");
+          engBtn.classList.add("active");
+          loadI18n("en");
+        });
+      }
+
 
       function formatPhone() {
         const phone = document.querySelector('.phone');
@@ -253,15 +410,24 @@
       }
 
       function exportPDF() {
-        const btn = document.querySelector('.btn-container')
+        const btn = document.querySelector('.btn-container');
+        const dropdwn = document.querySelector('.dropdown');
         btn.addEventListener("click", () => {
           btn.style.display = "none";
+          dropdwn.style.display = "none";
           setTimeout(() => {
             btn.style.display = "block";
+            dropdwn.style.display = "block";
           }, 500);
           window.print();
         });
       }
+
+      formatPhone();
+      exportPDF();
+      clickEventLanguage();
+      initLanguage();
+     
     </script>
   </body>
 </html>
